@@ -361,7 +361,13 @@ npm -v
 hexo g
 hexo s
 </code></pre><p><img src="https://sanqianxzfile.rth.app/cover2/2/img7.png" alt="新建博文"><br>复制<a href="http://localhost:4000/" target="_blank" rel="noopener">链接</a>，在浏览器打开<br><img src="https://sanqianxzfile.rth.app/cover2/2/img8.png" alt="新建博文"><br>按下Ctrl+C停止运行<br>这样，我们的hexo博客就在本地创建完成了<br>你可以选择在官网上下载一些好看的主题，比如我的博客主题就是樱花主题  </p>
-<h2 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h2><p>注册github/gitee账号，打开cmd。<br>设置用户名称<br><code>git config --global user.name &quot;用户名&quot;</code><br>设置用户邮箱<br><code>git config --global user.email &quot;用户邮箱&quot;</code><br>生成ssh密钥<br><code>ssh-keygen -t rsa -C &quot;用户邮箱&quot;</code><br>执行代码后，git会让你设置密码，可以直接回车。生成密钥后用记事本打开C盘的用户-用户名-.ssh里的id_rsa.pub，复制，然后打开github/gitee的账号设置，选择ssh密钥，密钥名随便取（如blog），然后将密钥复制进去，保存。  </p>
+<h2 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h2><p>注册github/gitee账号，打开cmd。<br>设置用户名称  </p>
+<pre><code>git config --global user.name &quot;用户名&quot;
+</code></pre><p>设置用户邮箱  </p>
+<pre><code>git config --global user.email &quot;用户邮箱&quot;
+</code></pre><p>生成ssh密钥  </p>
+<pre><code>ssh-keygen -t rsa -C &quot;用户邮箱&quot;
+</code></pre><p>执行代码后，git会让你设置密码，可以直接回车。生成密钥后用记事本打开C盘的用户-用户名-.ssh里的id_rsa.pub，复制，然后打开github/gitee的账号设置，选择ssh密钥，密钥名随便取（如blog），然后将密钥复制进去，保存。  </p>
 <h2 id="博客-config-yml-文件的配置"><a href="#博客-config-yml-文件的配置" class="headerlink" title="博客 _config.yml 文件的配置"></a>博客 _config.yml 文件的配置</h2><p>打开博客目录的_config.yml文件，在末端加入如下代码<br>https：</p>
 <pre><code>deploy:
   type: git
@@ -372,7 +378,9 @@ hexo s
   type: git
   repo: git@仓库地址.git
   branch: master
-</code></pre><p>这两种方法都行<br>然后，在powershell/cmd（博客目录下）中输入代码：<br><code>hexo d</code><br>这样，hexo博客就会生成静态文件推送到仓库  </p>
+</code></pre><p>这两种方法都行<br>然后，在powershell/cmd（博客目录下）中输入代码：  </p>
+<pre><code>hexo d
+</code></pre><p>这样，hexo博客就会生成静态文件推送到仓库  </p>
 <h2 id="Github-pages-Gitee-pages配置"><a href="#Github-pages-Gitee-pages配置" class="headerlink" title="Github pages/Gitee pages配置"></a>Github pages/Gitee pages配置</h2><p>Github pages：<br>新建仓库，名字为用户名.github.io，其它的随便选。<br><img src="https://sanqianxzfile.rth.app/cover2/2/img9.png" alt="Github pages"><br><img src="https://sanqianxzfile.rth.app/cover2/2/img10.png" alt="Github pages"><br>Gitee pages：<br>新建仓库，名字为用户名，其它的随便选。<br><img src="https://sanqianxzfile.rth.app/cover2/2/img11.png" alt="Gitee pages"><br><img src="https://sanqianxzfile.rth.app/cover2/2/img12.png" alt="Gitee pages"><br>github pages每次推送后无需去手动更新，gitee pages推送后要自己去手动更新。<br>本教程如果有疏漏/错误，请通过评论区（暂未添加）或邮箱告知我，谢谢。</p>
 
         </div>
