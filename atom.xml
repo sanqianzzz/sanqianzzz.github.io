@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://sanqianzzz.github.io/"/>
-  <updated>2021-04-21T09:07:54.400Z</updated>
+  <updated>2021-04-24T10:08:37.426Z</updated>
   <id>https://sanqianzzz.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Github/Gitee+Hexo搭建自己的博客</title>
+    <link href="https://sanqianzzz.github.io/2021/04/24/Github-Gitee-Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <id>https://sanqianzzz.github.io/2021/04/24/Github-Gitee-Hexo搭建自己的博客/</id>
+    <published>2021-04-24T08:06:31.000Z</published>
+    <updated>2021-04-24T10:08:37.426Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Github-Gitee-Hexo搭建自己的博客"><a href="#Github-Gitee-Hexo搭建自己的博客" class="headerlink" title="Github/Gitee+Hexo搭建自己的博客"></a>Github/Gitee+Hexo搭建自己的博客</h1><h2 id="hexo环境配置"><a href="#hexo环境配置" class="headerlink" title="hexo环境配置"></a>hexo环境配置</h2><p>安装  </p><ul><li>Node.js  </li><li>Git<br><a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">Node.js官网</a><br><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a><br>这里要说明第一个坑：Node.js版本不能太高！<br>否则，你的public文件夹大小会为0，部署到github以后页面打开也会是一片空白，像这样：<br><img src="https://sanqianxzfile.rth.app/cover2/2/img1.png" alt="反面例子"><br><img src="https://sanqianxzfile.rth.app/cover2/2/img2.png" alt="反面例子"><br>我下载的是<a href="https://nodejs.org/dist/latest-v12.x/" target="_blank" rel="noopener">Node.js12.22.1</a><br><img src="https://sanqianxzfile.rth.app/cover2/2/img3.png" alt="Node.js12.22.1"><br>安装程序全部选择“next”，安装完毕后可以打开cmd测试一下  <pre><code>node -v npm -v</code></pre><img src="https://sanqianxzfile.rth.app/cover2/2/img4.png" alt="测试"><br>Git直接下载官网右下角的安装包就行了<br>Git的安装程序里选择一下默认的代码编辑器，我这里选择了vscode<br>最后下载cnpm<br>国外下载比较慢，这里选择镜像  <pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2>cmd输入代码  <pre><code>npm install hexo-cli -g</code></pre>创建博客目录，你可以选择在桌面上新建文件夹，然后在该文件夹下打开cmd/powershell输入代码  <pre><code>hexo init 博客文件夹名</code></pre><img src="https://sanqianxzfile.rth.app/cover2/2/img5.png" alt="文件夹"><br>打开博客文件夹，在当前目录打开powershell<br><img src="https://sanqianxzfile.rth.app/cover2/2/img6.png" alt="powershell"><br>在powershell里输入cmd，然后输入代码<code>hexo new 博文名</code><br>打开source-_posts，你会发现里面多出了一个文件：博文名.md<br>用编辑器打开，随便输入一些内容。然后在powershell中输入hexo三连：  <pre><code>hexo clhexo ghexo s</code></pre><img src="https://sanqianxzfile.rth.app/cover2/2/img7.png" alt="新建博文"><br>复制<a href="http://localhost:4000/" target="_blank" rel="noopener">链接</a>，在浏览器打开<br><img src="https://sanqianxzfile.rth.app/cover2/2/img8.png" alt="新建博文"><br>按下Ctrl+C停止运行<br>这样，我们的hexo博客就在本地创建完成了<br>你可以选择在官网上下载一些好看的主题，比如我的博客主题就是樱花主题  <h2 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h2>注册github/gitee账号，打开cmd。<br>设置用户名称<br><code>git config --global user.name &quot;用户名&quot;</code><br>设置用户邮箱<br><code>git config --global user.email &quot;用户邮箱&quot;</code><br>生成ssh密钥<br><code>ssh-keygen -t rsa -C &quot;用户邮箱&quot;</code><br>执行代码后，git会让你设置密码，可以直接回车。生成密钥后用记事本打开C盘的用户-用户名-.ssh里的id_rsa.pub，复制，然后打开github/gitee的账号设置，选择ssh密钥，密钥名随便取（如blog），然后将密钥复制进去，保存。  <h2 id="博客-config-yml-文件的配置"><a href="#博客-config-yml-文件的配置" class="headerlink" title="博客 _config.yml 文件的配置"></a>博客 _config.yml 文件的配置</h2>打开博客目录的_config.yml文件，在末端加入如下代码<br>https：<pre><code>deploy:type: gitrepo: https://仓库地址.gitbranch: master</code></pre>ssh：<pre><code>deploy:type: gitrepo: git@仓库地址.gitbranch: master</code></pre>这两种方法都行<br>然后，在powershell/cmd（博客目录下）中输入代码：<br><code>hexo d</code><br>这样，hexo博客就会生成静态文件推送到仓库  <h2 id="Github-pages-Gitee-pages配置"><a href="#Github-pages-Gitee-pages配置" class="headerlink" title="Github pages/Gitee pages配置"></a>Github pages/Gitee pages配置</h2>Github pages：<br>新建仓库，名字为用户名.github.io，其它的随便选。<br><img src="https://sanqianxzfile.rth.app/cover2/2/img9.png" alt="Github pages"><br><img src="https://sanqianxzfile.rth.app/cover2/2/img10.png" alt="Github pages"><br>Gitee pages：<br>新建仓库，名字为用户名，其它的随便选。<br><img src="https://sanqianxzfile.rth.app/cover2/2/img11.png" alt="Gitee pages"><br><img src="https://sanqianxzfile.rth.app/cover2/2/img12.png" alt="Gitee pages"><br>github pages每次推送后无需去手动更新，gitee pages推送后要自己去手动更新。<br>本教程如果有疏漏/错误，请通过评论区（暂未添加）或邮箱告知我，谢谢。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Github-Gitee-Hexo搭建自己的博客&quot;&gt;&lt;a href=&quot;#Github-Gitee-Hexo搭建自己的博客&quot; class=&quot;headerlink&quot; title=&quot;Github/Gitee+Hexo搭建自己的博客&quot;&gt;&lt;/a&gt;Github/Gitee+H
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://sanqianzzz.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="hexo github" scheme="https://sanqianzzz.github.io/tags/hexo-github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客搭建完成</title>
     <link href="https://sanqianzzz.github.io/2021/04/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90/"/>
     <id>https://sanqianzzz.github.io/2021/04/19/博客搭建完成/</id>
     <published>2021-04-19T12:51:06.000Z</published>
-    <updated>2021-04-21T09:07:54.400Z</updated>
+    <updated>2021-04-24T08:10:19.748Z</updated>
     
     <content type="html"><![CDATA[<p>博客搭建完成~</p>]]></content>
     
