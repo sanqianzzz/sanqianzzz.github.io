@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="/"/>
+  <link href="https://sanqianzzz.github.io/"/>
   <updated>2021-04-21T09:07:54.400Z</updated>
-  <id>/</id>
+  <id>https://sanqianzzz.github.io/</id>
   
   <author>
     <name>三千星斩</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>博客搭建完成</title>
-    <link href="/2021/04/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90/"/>
-    <id>/2021/04/19/博客搭建完成/</id>
+    <link href="https://sanqianzzz.github.io/2021/04/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90/"/>
+    <id>https://sanqianzzz.github.io/2021/04/19/博客搭建完成/</id>
     <published>2021-04-19T12:51:06.000Z</published>
     <updated>2021-04-21T09:07:54.400Z</updated>
     
@@ -35,7 +35,7 @@
     
     </summary>
     
-      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://sanqianzzz.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
   </entry>
