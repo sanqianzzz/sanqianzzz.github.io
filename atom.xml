@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>三千的小窝φ(&gt;ω&lt;*)</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2021-04-21T09:07:54.400Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>三千星斩</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客搭建完成</title>
+    <link href="/2021/04/19/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90/"/>
+    <id>/2021/04/19/博客搭建完成/</id>
+    <published>2021-04-19T12:51:06.000Z</published>
+    <updated>2021-04-21T09:07:54.400Z</updated>
+    
+    <content type="html"><![CDATA[<p>博客搭建完成~</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;博客搭建完成~&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+  </entry>
+  
+</feed>
