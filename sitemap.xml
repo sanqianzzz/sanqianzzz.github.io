@@ -95,20 +95,6 @@
 
   
   <url>
-    <loc>https://sanqianzzz.github.io/tags/hexo/</loc>
-    <lastmod>2021-07-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://sanqianzzz.github.io/tags/github/</loc>
-    <lastmod>2021-07-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://sanqianzzz.github.io/tags/html/</loc>
     <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
@@ -117,6 +103,20 @@
   
   <url>
     <loc>https://sanqianzzz.github.io/tags/css/</loc>
+    <lastmod>2021-07-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sanqianzzz.github.io/tags/hexo/</loc>
+    <lastmod>2021-07-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sanqianzzz.github.io/tags/github/</loc>
     <lastmod>2021-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
